@@ -9,3 +9,8 @@ class Status(models.Model):
     posted_at = models.DateTimeField()
     user = models.ForeignKey(User)
     #makemigrations in terminal will adjust any models that have been updated
+
+class Favorite(models.Model):
+    user = models.ForeignKey(User)
+    status = models.ForeignKey(Status)
+    
